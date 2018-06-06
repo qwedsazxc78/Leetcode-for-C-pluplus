@@ -1,3 +1,0 @@
-/Users/MH/SourceTreeproject/Leetcode-for-C-pluplus/build/CMakeFiles/rebuild_cache.dir
-/Users/MH/SourceTreeproject/Leetcode-for-C-pluplus/build/CMakeFiles/edit_cache.dir
-/Users/MH/SourceTreeproject/Leetcode-for-C-pluplus/build/CMakeFiles/hello-vscode.dir
