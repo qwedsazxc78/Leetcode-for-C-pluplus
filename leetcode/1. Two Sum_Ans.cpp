@@ -18,24 +18,25 @@ using namespace std;
 class Solution {
 public:
 	vector<int> twoSum(vector<int> &numbers, int target) {
-		unordered_map<int, int> pairMap;
+		unordered_map<int, int> m;
 		vector<int> result;
-
-		for (int i = 0; i < numbers.size(); ++i)
-		{
-			if (pairMap.find(numbers[i]) == pairMap.end() )
-			{
-				// save the first one value
-				pairMap[ target - numbers[i]] = i;
+		for (int i = 0; i < numbers.size(); i++) {
+			// not found the second one
+			if (m.find(numbers[i]) == m.end() ) {
+				// store the first one poisition into the second one's key
+				m[target - numbers[i]] = i;
+				cout << "1: " << numbers[i] << ", " << target - numbers[i] << ", " << m[target - numbers[i]] << ", " << i << endl;
 
 			} else {
-				// from the array map to key, then get the position from value
-				result.push_back(pairMap[numbers[i]] );
-				result.push_back(i);
+				// found the second one
+				result.push_back(m[numbers[i]] + 1);
+				result.push_back(i + 1);
+				cout << "2: " << m[numbers[i]] + 1 << ", " << i + 1 << endl;
+				cout << "2 result: " << result[0] << ", " << result[1] << endl;
+
 				break;
 			}
 		}
-
 		return result;
 	}
 };
